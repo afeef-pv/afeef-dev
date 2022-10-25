@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply text-white bg-gray-800;
+}
+
+.green-text {
+  display: inline-block;
+  text-decoration: none;
+  color: #00cc00;
+  text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: consolas;
+}
+
+.container a {
+  position: relative;
+  display: inline-box;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.container a:hover {
+  color: #2196f3;
+  backgroud: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+.container a span {
+  position: absolute;
+  display: block;
+}
+.container a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3)
+}
+.container a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.container a span:nth-child(2) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3)
+}
+.container a:hover span:nth-child(2) {
+  right: 100%;
+  transition: 1s;
+}
+
+.m-accordion-item {
+  min-width: 800px;
+  border: 1px solid black;
+  border-radius: .5em;
+  background-color: #3d0894;
+}
+
+.m-accordion-title:hover {
+  background-color: #3d0894;
+}
+
+.m-accordion-title,
+.m-accordion-content {
+  background-color: #3d0894;
+  padding: 1rem;
+}
+
+.m-accordion-content {
+  background-color: #3d0894;
+}
