@@ -10,11 +10,13 @@ type Project = {
 function ProjectElement({ project }: { project: Project }) {
   const [isActive, setIsActive] = useState(false);
   const details = project.details.map((note, key) => (
-    <li key={key} className="p-1">• {note}</li>
+    <li key={key} className="p-1">
+      • {note}
+    </li>
   ));
   const content = (
     <div>
-      <p className="italic">"{project.description}"</p>
+      <p className="italic">{project.description}</p>
       <ul>{details}</ul>
     </div>
   );
@@ -27,7 +29,10 @@ function ProjectElement({ project }: { project: Project }) {
 
   return (
     <div className="m-accordion-item" ref={parent}>
-      <div className="m-accordion-title flex justify-between" onClick={() => setIsActive(!isActive)}>
+      <div
+        className="m-accordion-title flex justify-between"
+        onClick={() => setIsActive(!isActive)}
+      >
         <h3 className="text-2xl">{project.name}</h3>
         <div>{isActive ? "-" : "+"}</div>
       </div>
@@ -55,13 +60,12 @@ export default function Projects() {
         "Daily, Weekly, & Monthly tests",
         "Native android",
         "React based dashboard",
-        "Firebase for storing data & authentication"
+        "Firebase for storing data & authentication",
       ],
     },
     {
       name: "Silkroad",
-      description:
-        "Cross platform moblile Application for e-commerce",
+      description: "Cross platform moblile Application for e-commerce",
       details: [
         "Stores can create an account and register",
         "Delivery partners can create an account and register",
@@ -69,38 +73,36 @@ export default function Projects() {
         "Microservice based architecture",
         "Express, Postgres, RabbitMQ, & Sequelize",
         "Flutter based mobile apps for customers, stores, & delivery partners",
-        "Docker, Kubernetes, & AWS"
+        "Docker, Kubernetes, & AWS",
       ],
     },
     {
       name: "Earthrich",
-      description:
-        "Web application for an architect",
+      description: "Web application for an architect",
       details: [
         "NestJS, Postgres & Sequelize",
         "Dashboard with angular",
-        "Docker, Kubernetes, & AWS"
+        "Docker, Kubernetes, & AWS",
       ],
     },
     {
       name: "Junction",
-      description:
-        "Programattic ad-campaign delivery network",
+      description: "Programattic ad-campaign delivery network",
       details: [
         "Mutli user web application and delivery network",
         "Multiple services and workers",
         "Inversify, Express, Postgres, Fastify, & Sequelize",
         "Dashboard with angular",
-        "Docker, Kubernetes, & AWS"
+        "Docker, Kubernetes, & AWS",
       ],
-    }
+    },
   ];
   const projectElements = myProjects.map((project, key) => (
     <ProjectElement key={key} project={project} />
   ));
   return (
     <div className="mt-16 flex flex-col items-center">
-      <h1 className="text-3xl mb-4 font-bold">Projects</h1>
+      <h1 className="mb-4 text-3xl font-bold">Projects</h1>
       {projectElements}
     </div>
   );

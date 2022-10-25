@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply text-white bg-gray-800;
+  @apply bg-gray-800 text-white;
 }
 
 .green-text {
@@ -49,7 +49,7 @@ body {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #2196f3)
+  background: linear-gradient(90deg, transparent, #2196f3);
 }
 .container a:hover span:nth-child(1) {
   left: 100%;
@@ -61,7 +61,7 @@ body {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #2196f3)
+  background: linear-gradient(270deg, transparent, #2196f3);
 }
 .container a:hover span:nth-child(2) {
   right: 100%;
@@ -71,7 +71,7 @@ body {
 .m-accordion-item {
   min-width: 800px;
   border: 1px solid black;
-  border-radius: .5em;
+  border-radius: 0.5em;
   background-color: #3d0894;
 }
 
