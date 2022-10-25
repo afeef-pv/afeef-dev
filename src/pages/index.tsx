@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <h1 className="pt-2 text-4xl font-bold">Afeef</h1>
       <h2 className="text-xl">Fullstack developer</h2>
       <h4 className="text-xl">
-        I like software engineering, philosophy, science, and MMA{" "}
+        I like-Software Engineering, Philosophy, Theology, Science, and MMA{" "}
       </h4>
       <div className="flex">
         <NeonButton label="Resume" link="resume" />
